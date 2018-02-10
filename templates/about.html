@@ -1,6 +1,45 @@
 {% extends 'layout.html'%}
 
 {% block body %}
-<h1>About</h1>
-  
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">About</h1>
+        <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, nesciunt minima quas blanditiis illo iure dolorem unde nam placeat quae corporis in dolores facere, eius quidem voluptates libero pariatur assumenda!</p>
+        <p>
+          <a href="#work" class="btn btn-primary my-2">Us In Action</a>
+          <a href="/stat" class="btn btn-secondary my-2">Check The Stats</a>
+        </p>
+      </div>
+    </section>
+    <div id="work" class="row">
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{ url_for('img', filename='img-1.jpg') }}" alt="JTTF Jacket" style="height: 225px; width: 100%; display: block;">
+          <div class="card-body">
+            <p class="card-text">Joint Terrorism Task Force (JTTF) is charged with taking action against terrorism which includes the investigation of crimes such as wire fraud and identity theft.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{ url_for('img', filename='img-2.jpg') }}" alt="JTTF Repelling" style="height: 225px; width: 100%; display: block;">
+          <div class="card-body">
+            <p class="card-text">Joint Terrorism Task Force (JTTF) engage in surveillance, electronic monitoring, source development and interviews in their pursuits.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{ url_for('img', filename='img-3.jpg') }}" alt="JTTF Preping" style="height: 225px; width: 100%; display: block;">
+          <div class="card-body">
+            <p class="card-text">Joint Terrorism Task Force (JTTF) is a partnership between various federal, state, and local law enforcement agencies, as well as private organizations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
