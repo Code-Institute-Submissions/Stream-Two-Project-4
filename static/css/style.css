@@ -1,0 +1,12 @@
+.absolute-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.jumbotron {
+  background-color: #fff; }
+
+.fix-align {
+  margin-left: 15px; }
+
+/*# sourceMappingURL=style.css.map */
