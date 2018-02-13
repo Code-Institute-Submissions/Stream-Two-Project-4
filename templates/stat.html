@@ -1,6 +1,28 @@
 {% extends 'layout.html'%}
 
 {% block body %}
-<h1>Stats</h1>
+<div class="container">
+  <h1>Stats</h1>
+  <div class="row">
+    <div id='freq-by-year' class="mt-5 col-12">
+      <h2 class='label'>Amount of attacks over the years</h2>
+    </div>
+    <div id='attack-by-state' class="mt-5 col-12">
+      <h2 class='label'>Attacks by state</h2>
+    </div>
+    <div id='attack-by-city' class="mt-5 col-12">
+      <h2 class='label'>Attacks by city</h2>
+    </div>
+    <div class="mt-5 col-12">
+      <h2 class='label'>Attack Info</h2>
+      <table id='event-table' class="table">
+        
+      </table>
+    </div>
+      
+  </div>
+    
+  <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+</div>
 
 {% endblock %}
