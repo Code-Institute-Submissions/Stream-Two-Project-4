@@ -1,13 +1,14 @@
-var freqChart = dc.lineChart('#freq-by-year');
-var eventChart = dc.dataTable('#event-table');
-var selectField = dc.selectMenu('#attack-by-state');
-var selectField2 = dc.selectMenu('#attack-by-city');
 
 queue()
  .defer(d3.json, "/stat/data")
  .await(makeGraphs);
 
 function makeGraphs(error, data) {
+  var freqChart = dc.lineChart('#freq-by-year');
+  var eventChart = dc.dataTable('#event-table');
+  var selectField = dc.selectMenu('#attack-by-state');
+  var selectField2 = dc.selectMenu('#attack-by-city');
+
   var dateFormat = d3.time.format("%Y");
   data.forEach(function (d) {
       d["year"] = dateFormat.parse(d["year"]+'');
@@ -57,7 +58,8 @@ function makeGraphs(error, data) {
     .columns([
       "city",
       "state",
-      "summary"]);
+      "summary"
+    ]);
 
   selectField
     .dimension(stateDim)
@@ -68,4 +70,14 @@ function makeGraphs(error, data) {
     .group(cityGroup);
 
   dc.renderAll();
+
+  $(window).resize(function(){
+    var loop;
+    clearTimeout(loop);
+    loop=setTimeout(function(){
+      dc.renderAll();
+    },500);
+  });
 }
+
+introJs().start();
