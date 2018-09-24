@@ -1,3 +1,30 @@
+html{
+  width: 100%;
+}
+body {
+  background-image: url(../../img/matthew-kane-774937-unsplash.jpg);
+  /* background-size: contain; */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #6b6b6b;
+  color: #dadada;
+  width: 100%;
+}
+#freq-by-year{
+  text{
+    fill: #dadada
+  }
+}
+.intro{
+  background-color: RGBA(222, 83, 71, 1.00);
+}
+.bg-transdark{
+  background-color: RGBA(73, 73, 73, 0.9);
+  margin-top: 2%;
+  padding: 2%;
+}
 .absolute-center{
   left: 50%;
   top: 50%;
