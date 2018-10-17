@@ -13,6 +13,9 @@ body {
   width: 100%;
 }
 #freq-by-year{
+header{
+  z-index: 999999;
+}
   text{
     fill: #dadada
   }
