@@ -1,9 +1,8 @@
 html{
   width: 100%;
 }
-body {
+body{
   background-image: url(../../img/matthew-kane-774937-unsplash.jpg);
-  /* background-size: contain; */
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -12,12 +11,22 @@ body {
   color: #dadada;
   width: 100%;
 }
-#freq-by-year{
 header{
   z-index: 999999;
 }
+.ovfl{
+  overflow: hidden;
+}
+#freq-by-city{
+  input{
+    user-select: none;
+  }
+}
+#freq-by-year, 
+#freq-by-city{
   text{
-    fill: #dadada
+    fill: #dadada;
+    user-select: none;
   }
 }
 .intro{
@@ -25,8 +34,8 @@ header{
 }
 .bg-transdark{
   background-color: RGBA(73, 73, 73, 0.9);
-  margin-top: 2%;
-  padding: 2%;
+  width: 100%;
+
 }
 .absolute-center{
   left: 50%;
@@ -39,11 +48,10 @@ header{
 .fix-align{
   margin-left: 15px;
 }
-
-#attack-by-city,#attack-by-state{
+#attack-by-city,
+#attack-by-state{
   display: inline-block;
 }
-
 footer
 {
   p{

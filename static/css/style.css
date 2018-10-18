@@ -3,7 +3,6 @@ html {
 
 body {
   background-image: url(../../img/matthew-kane-774937-unsplash.jpg);
-  /* background-size: contain; */
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -12,23 +11,38 @@ body {
   color: #dadada;
   width: 100%; }
 
-#freq-by-year text {
-  fill: #dadada; }
 header {
   z-index: 999999; }
+
+.ovfl {
+  overflow: hidden; }
+
+#freq-by-city input {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+#freq-by-year text,
+#freq-by-city text {
+  fill: #dadada;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 .intro {
   background-color: RGBA(222, 83, 71, 1); }
 
 .bg-transdark {
   background-color: RGBA(73, 73, 73, 0.9);
-  margin-top: 2%;
-  padding: 2%; }
+  width: 100%; }
 
 .absolute-center {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .jumbotron {
   background-color: #fff; }
@@ -36,7 +50,8 @@ header {
 .fix-align {
   margin-left: 15px; }
 
-#attack-by-city, #attack-by-state {
+#attack-by-city,
+#attack-by-state {
   display: inline-block; }
 
 footer p {

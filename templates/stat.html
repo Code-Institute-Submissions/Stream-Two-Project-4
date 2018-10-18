@@ -1,35 +1,57 @@
 {% extends 'layout.html'%}
 
 {% block body %}
-<div class="bg-transdark">
-  <h1>Stats</h1>
-  <p class='lead'>This page shows data on terrorist attacks that happen in this country every year. Thus showing why the JTTF exists, what we are up against and why we are working 24/7/365 to protect you, your families, and your communities from terrorist attack both foreign and domestic.</p>
-  <a href="javascript:dc.filterAll(); dc.renderAll();" data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</a>
-  <div class="row">
-    <div id='freq-by-year' class="mt-5 col-12 col-md-6" data-intro="This graph shows the frequency of attacks over the years." data-highlightClass="intro" data-tooltipClass="intro">
-      <h2 class='label'>Amount of attacks over the years</h2>
-    </div>
-    <div id='amount-by-state' class="mt-5 col-12 col-md-6" data-intro="This graph does a state comparison of attacks." data-highlightClass="intro" data-tooltipClass="intro">
-      <h2 class='label'>State comparison of attack amount</h2>
-    </div>
-    <div id='attack-by-state' class="mt-5 col-12 col-md-4" data-intro="Use this to filter the graphs by state." data-highlightClass="intro" data-tooltipClass="intro">
-      <h2 class='label'>Attacks by state</h2>
-    </div>
-    <div id='attack-by-city' class="mt-5 col-12 col-md-4" data-intro="Use this to filter the graphs by city." data-highlightClass="intro" data-tooltipClass="intro">
-      <h2 class='label'>Attacks by city</h2>
-    </div>
-    <div id='attack-by-year' class="mt-5 col-12 col-md-4" data-intro="Use this to filter the graphs by year." data-highlightClass="intro" data-tooltipClass="intro">
-      <h2 class='label'>Attacks by year</h2>
-    </div>
+<div class="row">
+  <div class="bg-transdark col-12 mt-5">
+    <h1>Stats</h1>
+    <p class='lead'>This page shows data on terrorist attacks that happen in this country every year. Thus showing why the JTTF exists, what we are up against and why we are working 24/7/365 to protect you, your families, and your communities from terrorist attack both foreign and domestic.</p>
+    <a class="text-white" href="javascript:dc.filterAll(); dc.renderAll();" data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</a>
+    <div class="row">
+      <div id='freq-by-year' class="mt-5 col-12" data-intro="This graph shows the frequency of attacks over the years." data-highlightClass="intro" data-tooltipClass="intro">
+        <h2 class='label'>Amount of attacks over the years</h2>
+      </div>
+      <div class="ovfl pr-3">
+        <div id='freq-by-city' class="mt-5 col-12" style="width: 100%; overflow: hidden;" data-intro="This graph shows the frequency of attacks by City." data-highlightClass="intro" data-tooltipClass="intro">
+          <h2 class='label'>Amount of attacks by city (<span id="attack-number"></span>)</h2>
+          <div class="container">
+            <div class="row">
+              <button id="btn-prev" class="col-6 d-md-none btn btn-primary">Prev</button>
 
-    <div class="mt-5 col-12" data-intro="This show information about the attacks." data-highlightClass="intro" data-tooltipClass="intro">
-      <h2 class='label'>Attack Info</h2>
-      <table id='event-table' class="table">
-      </table>
+              <input id="chartscroll" class="w-100 d-none d-md-block" type="range"  value="0" min="0" max="100" step="1">
+          
+              <button id="btn-next" class="col-6 d-md-none btn btn-primary">Next</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+        
+      <div id='amount-by-state' class="mt-5 col-12" data-intro="This graph does a state comparison of attacks." data-highlightClass="intro" data-tooltipClass="intro">
+        <h2 class='label'>State comparison of attack amount</h2>
+      </div>
+      <div id='attack-by-state' class="mt-5 col-12 col-md-4" data-intro="Use this to filter the graphs by state." data-highlightClass="intro" data-tooltipClass="intro">
+        <h2 class='label'>Attacks by state</h2>
+      </div>
+      <div id='attack-by-city' class="mt-5 col-12 col-md-4" data-intro="Use this to filter the graphs by city." data-highlightClass="intro" data-tooltipClass="intro">
+        <h2 class='label'>Attacks by city</h2>
+      </div>
+      <div id='attack-by-year' class="mt-5 col-12 col-md-4" data-intro="Use this to filter the graphs by year." data-highlightClass="intro" data-tooltipClass="intro">
+        <h2 class='label'>Attacks by year</h2>
+      </div>
+
+      <div class="mt-5 col-12" data-intro="This show information about the attacks." data-highlightClass="intro" data-tooltipClass="intro">
+        <h2 class='label'>Attack Info</h2>
+        <table id='event-table' class="table">
+        </table>
+        Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span>.
+        <button id="info-prev" class="btn btn-primary">Prev</button>
+        <button id="info-next" class="btn btn-primary">Next</button>
+      </div>
+        
     </div>
       
+    <a class="text-white" href="javascript:dc.filterAll(); dc.renderAll();" data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</a>
   </div>
-    
-  <a href="javascript:dc.filterAll(); dc.renderAll();" data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</a>
 </div>
+  
 {% endblock %}
