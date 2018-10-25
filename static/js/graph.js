@@ -10,10 +10,7 @@ if($(location)[0].pathname=='/stat'){
     var offset = 0;
     var page = 10;
     var yearFreqChart = dc.lineChart('#freq-by-year');
-
     var cityFreqChart = dc.barChart('#freq-by-city');
-
-
     var eventChart = dc.dataTable('#event-table');
     var selectField = dc.selectMenu('#attack-by-state');
     var selectField2 = dc.selectMenu('#attack-by-city');
@@ -62,7 +59,6 @@ if($(location)[0].pathname=='/stat'){
     .group(all)
     .formatNumber(d3.format(""))
     .valueAccessor(function(d) {
-      console.log(d)
       dataSize = d;
       offset= 0;
       chartUpdate();
@@ -163,7 +159,6 @@ if($(location)[0].pathname=='/stat'){
       d3.select('#info-next')
           .attr('disabled', offset+page>=dataSize ? 'true' : null);
       d3.select('#size').text(dataSize);
-      console.log(dataSize)
     }
     function chartUpdate() {
       eventChart.beginSlice(offset);
@@ -195,7 +190,7 @@ if($(location)[0].pathname=='/stat'){
     .group(yearGroup2);
 
     stateChart
-    .height(300)
+    // .height(300)
     // .drawPaths(true);
     .dimension(stateDim2)
     .group(stateGroup2)
