@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 MONGO_URI = os.getenv('MONGODB_URI', '<put your database URL here>')
 DBS_NAME = os.getenv('MONGO_DB_NAME', '<put your database name here>')
-COLLECTION_NAME = '<put your collection name>'
+COLLECTION_NAME = os.getenv('COLLECTION_NAME', '<put your collection name>')
 
 @app.route("/")
 def index():
