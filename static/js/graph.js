@@ -136,6 +136,7 @@ if($(location)[0].pathname=='/stat'){
     .group(function(d){
       return '';
     })
+    .minWidth(10)
     .size(Infinity)
     .columns([
       "city",
@@ -191,6 +192,7 @@ if($(location)[0].pathname=='/stat'){
 
     stateChart
     // .height(300)
+    .minWidth(10)
     // .drawPaths(true);
     .dimension(stateDim2)
     .group(stateGroup2)

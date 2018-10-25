@@ -1,4 +1,6 @@
-html{
+html,body{
+  min-width: 100px;
+  overflow-x: hidden;
   width: 100%;
 }
 body{
@@ -35,7 +37,6 @@ header{
 .bg-transdark{
   background-color: RGBA(73, 73, 73, 0.9);
   width: 100%;
-
 }
 .absolute-center{
   left: 50%;

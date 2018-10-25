@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="row">
-  <div class="bg-transdark col-12 mt-5 p-3 w-100">
+  <div class="bg-transdark col-12 mt-5 p-3 w-auto">
     <h1>Stats</h1>
     <p class='lead'>This page shows data on terrorist attacks that happen in this country every year. Thus showing why the JTTF exists, what we are up against and why we are working 24/7/365 to protect you, your families, and your communities from terrorist attack both foreign and domestic.</p>
     <button class="text-white btn btn-danger" onclick="javascript:dc.filterAll(); dc.renderAll();" title="This resets everything." data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</button>
@@ -41,13 +41,14 @@
 
       <div class="mt-5 col-12" data-intro="This show information about the attacks." data-highlightClass="intro" data-tooltipClass="intro">
         <h2 class='label'>Attack Info</h2>
-        <table id='event-table' class="table">
-        </table>
-        Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span>.
-        <button id="info-prev" class="btn btn-primary">Prev</button>
-        <button id="info-next" class="btn btn-primary">Next</button>
-      </div>
-        
+        <table id='event-table' class="table"></table>
+        <p class="text-center">Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span>.</p>
+        <div class="text-center">
+          <button id="info-prev" class="btn btn-primary">Prev</button>
+          <button id="info-next" class="btn btn-primary">Next</button>
+        </div>
+          
+      </div>        
     </div>
     <button class="text-white btn btn-danger" onclick="javascript:dc.filterAll(); dc.renderAll();" title="This resets everything." data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</button>
   </div>
