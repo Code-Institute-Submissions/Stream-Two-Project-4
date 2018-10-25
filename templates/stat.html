@@ -2,10 +2,10 @@
 
 {% block body %}
 <div class="row">
-  <div class="bg-transdark col-12 mt-5">
+  <div class="bg-transdark col-12 mt-5 p-3 w-100">
     <h1>Stats</h1>
     <p class='lead'>This page shows data on terrorist attacks that happen in this country every year. Thus showing why the JTTF exists, what we are up against and why we are working 24/7/365 to protect you, your families, and your communities from terrorist attack both foreign and domestic.</p>
-    <a class="text-white" href="javascript:dc.filterAll(); dc.renderAll();" data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</a>
+    <button class="text-white btn btn-danger" onclick="javascript:dc.filterAll(); dc.renderAll();" title="This resets everything." data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</button>
     <div class="row">
       <div id='freq-by-year' class="mt-5 col-12" data-intro="This graph shows the frequency of attacks over the years." data-highlightClass="intro" data-tooltipClass="intro">
         <h2 class='label'>Amount of attacks over the years</h2>
@@ -49,8 +49,7 @@
       </div>
         
     </div>
-      
-    <a class="text-white" href="javascript:dc.filterAll(); dc.renderAll();" data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</a>
+    <button class="text-white btn btn-danger" onclick="javascript:dc.filterAll(); dc.renderAll();" title="This resets everything." data-intro="This resets everything." data-highlightClass="intro" data-tooltipClass="intro">Reset All</button>
   </div>
 </div>
   
