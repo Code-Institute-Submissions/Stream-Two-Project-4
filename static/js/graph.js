@@ -191,12 +191,9 @@ if($(location)[0].pathname=='/stat'){
     .group(yearGroup2);
 
     stateChart
-    // .height(300)
     .minWidth(10)
-    // .drawPaths(true);
     .dimension(stateDim2)
     .group(stateGroup2)
-    .innerRadius(50)
 
     chartUpdate();
     dc.renderAll();
